@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Enter the texts to be compared</h1>
+    <form method="POST">
+        <input type="text" name="text1">
+        <input type="text" name="text2">
+        <input type="submit" value="Run the program !">
+    </form>
+    
+    <!-- if python passed a result -->
+	{% if compareResult %}
+		<!-- if that result is true -->
+		{% if compareResult == True %}
+			<p>Text is the same</p>
+		{% else %}
+			<p>Text is different</p>
+		{% endif %}
+	{% endif %}
+</body>
+</html>
